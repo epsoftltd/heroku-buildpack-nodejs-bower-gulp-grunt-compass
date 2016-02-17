@@ -99,12 +99,16 @@ else
   run_gulp=0
 fi
 
+(
+    ln -s $build_dir/src/epsoft/src/Resources/Views $build_dir/web/views
+)
+
 # Scope config var availability only to `npm install`
 (
   if [ -d "$env_dir" ]; then
     status "Exporting config vars to environment"
     export_env_dir $env_dir
-  fi
+fi
 
   status "Installing dependencies"
   # Make npm output to STDOUT instead of its default STDERR
