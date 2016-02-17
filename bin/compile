@@ -186,7 +186,7 @@ export PATH="$GEM_HOME/bin:$PATH"
 (
   # porting in compass install
   # install compass
-  status "Installing Compass"
+  status "Installing Sass"
   export LANG=en_US.UTF-8
   export LC_ALL=en_US.UTF8
   if test -d $cache_dir/ruby/.gem; then
@@ -200,8 +200,6 @@ export PATH="$GEM_HOME/bin:$PATH"
   # Run bundler
   bundle install 2>&1 | indent
 
-  # Run compass
-  HOME=$build_dir bundle exec compass compile
 )
 
 # cache ruby gems compass
