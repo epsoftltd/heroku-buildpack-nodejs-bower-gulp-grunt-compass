@@ -100,6 +100,7 @@ else
 fi
 
 (
+    status "Symlink in views to webroot"
     ln -s $build_dir/src/epsoft/src/Resources/Views $build_dir/web/views
 )
 
